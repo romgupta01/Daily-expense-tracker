@@ -1,0 +1,109 @@
+/* Main wrapper */
+.category-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fbf9f9;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 500px;
+
+}
+
+/* Category menu container */
+.category-menu {
+  display: flex;
+  flex-wrap: wrap;  /* multiple lines if needed */
+  gap: 15px;
+}
+
+/* Individual category button */
+.category-button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1.5px solid #007bff;
+  background: #fff;
+  color: #007bff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect */
+.category-button:hover {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Active category */
+.category-button.active {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Expense list container */
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Expense item cards */
+.filtered-expense-item {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filtered-expense-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Expense text */
+.filtered-expense-item h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.filtered-expense-item p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: green;
+}
+
+/* Dark mode support */
+body.dark-mode .category-filter-wrapper {
+  background: #1f1f1f;
+}
+
+body.dark-mode .category-button {
+  background: #2a2a2a;
+  color: #f1f1f1;
+  border-color: #555;
+}
+
+body.dark-mode .filtered-expense-item {
+  background: #2b2b2b;
+  border-color: #3a3a3a;
+  color: #f1f1f1;
+}
+@media (max-width: 500px) {
+  .category-button {
+    flex: 1 1 100%;   /* buttons take full width on small screens */
+    max-width: 100%;
+  }
+  
+  .category-filter-wrapper {
+    padding: 15px;
+    width:auto;
+  }
+}

@@ -1,0 +1,119 @@
+/* ExpenseList.css */
+
+/* ---------- Container ---------- */
+.expense-list {
+  width: 420px;
+  max-width: 90%;
+  margin: 35px auto;
+  padding: 30px 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 30px rgba(31, 38, 135, 0.15);
+  transition: all 0.4s ease;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+.expense-list:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);
+}
+
+/* ---------- Heading ---------- */
+.expense-list h3 {
+  text-align: center;
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- Empty State ---------- */
+.expense-list p {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* ---------- Expense Item ---------- */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.expense-item:hover {
+  background: #f5f3ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(106, 90, 205, 0.25);
+}
+
+/* ---------- Expense Details ---------- */
+.expense-info {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.expense-info strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.expense-info small {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+/* ---------- Delete Button ---------- */
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d4d, #ff6a6a);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #e84141, #ff4d4d);
+  box-shadow: 0 3px 10px rgba(255, 77, 77, 0.4);
+  transform: scale(1.05);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 480px) {
+  .expense-list {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+
+  .expense-list h3 {
+    font-size: 1.3rem;
+  }
+}
